@@ -8,9 +8,10 @@ const NavbarButton = () => {
 
   return (
     <div className='flex items-center justify-center h-20'>
-      <div className="drawer-content">
+      <div className="drawer-content flex justify-center items-center">
         <label htmlFor="my-drawer-4" className="drawer-button btn btn-primary lg:hidden absolute 
-      top-0 right-0 w-20 h-20 rounded-full flex items-center justify-center
+      top-0 right-0 rounded-full flex items-center justify-center
+      p-0 m-4
       bg-transparent border-transparent shadow-none
       hover:bg-transparent hover:border-transparent">
           <Hamburger size={24} />
