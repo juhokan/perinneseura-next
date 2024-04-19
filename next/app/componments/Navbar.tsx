@@ -8,7 +8,7 @@ import NavbarDrawer from './NavbarDrawer';
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-white p-0 drop-shadow-3xl">
+    <div className="navbar bg-white p-0 drop-shadow-3xl z-50">
       <Link href={'/'}>
         <Image src={logo} alt='PerinneSeura' className='h-16 max-w-min py-1 px-4' />
       </Link>
@@ -18,7 +18,7 @@ const Navbar = () => {
           <NavbarLinks className='flex' paddinngX='6' paddinngY='4'/>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end z-50">
         <NavbarButton />
       </div>
     </div>

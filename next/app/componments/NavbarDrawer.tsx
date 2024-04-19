@@ -4,7 +4,7 @@ import NavbarLinks from './NavbarLinks'
 const NavbarDrawer = () => {
   return (
     <div className="navbar-start">
-      <div className="drawer drawer-end">
+      <div className="drawer drawer-end z-40">
         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
         <div className="drawer-side">
           <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>

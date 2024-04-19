@@ -24,8 +24,10 @@ export default function RootLayout({
         <link rel="icon" href={faviconUrl} sizes="any" />
       </head>
       <body className={playfair.className}>
-        <Navbar />
-        {children}
+        <main>
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
