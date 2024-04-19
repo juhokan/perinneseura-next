@@ -7,6 +7,7 @@ import NavbarLinks from './NavbarLinks';
 import NavbarDrawer from './NavbarDrawer';
 
 const Navbar = () => {
+
   return (
     <div className="navbar bg-white p-0 drop-shadow-3xl z-50">
       <Link href={'/'}>

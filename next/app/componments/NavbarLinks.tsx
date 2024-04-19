@@ -25,7 +25,7 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ className, paddinngX, paddinn
           </span>
         </a>
       </div>
-      <div className={`group text-black transition-all duration-300 ease-in-out px-${paddinngX} py-${paddinngY}`}>
+      <div className={`group text-black transition-all duration-300 ease-in-out px-${paddinngX} py-${paddinngY} drawer-overlay`}>
         <Link href={'/join'} className='text-xl hover:bg-transparent focus:bg-transparent focus:text-black'>
           <span className='bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
             Jäseneksi?
