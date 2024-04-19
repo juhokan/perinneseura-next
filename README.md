@@ -25,7 +25,7 @@ To get started with the PerinneSeura Website, follow these steps:
    ```
 2. Navigate into the project directory:
    ```bash
-   cd perinneseura-next
+   cd perinneseura-next/next
    ```
 3. Install dependencies using npm or yarn:
     ```bash
@@ -35,9 +35,9 @@ To get started with the PerinneSeura Website, follow these steps:
    ```
 4. Start the development server:
     ```bash
-    npm install
+    npm run dev
     # or
-    yarn install
+   yarn dev
    ```
 5. Open your browser and visit `http://localhost:3000` to view the website.
 
