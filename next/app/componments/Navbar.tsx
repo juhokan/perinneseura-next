@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/pseura-logo.svg'
+import logo from '../../public/pseura-logo.svg'
 import Image from 'next/image';
 import Link from 'next/link';
 import NavbarButton from './NavbarButton';

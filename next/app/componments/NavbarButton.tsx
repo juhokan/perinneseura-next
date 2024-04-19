@@ -2,7 +2,7 @@
 import React from 'react'
 import { Cross as Hamburger } from 'hamburger-react'
 import Image from 'next/image';
-import stripes from '../assets/stripes.svg'
+import stripes from '../../public/stripes.svg'
 
 const NavbarButton = () => {
 

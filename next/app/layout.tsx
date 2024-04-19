@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "../app/componments/Navbar"
-import favicon from "../public/favicon.ico";
+import favicon from "../app/favicon.ico";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
