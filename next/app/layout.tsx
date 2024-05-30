@@ -1,14 +1,15 @@
-import { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
-import "./globals.css";
-import Navbar from "../app/componments/Navbar"
-import favicon from "../app/favicon.ico";
+import React from 'react';
+import { Metadata } from 'next';
+import { Playfair_Display } from 'next/font/google';
+import './globals.css';
+import Navbar from './componments/Navbar';
+import favicon from './favicon.ico';
 
-const playfair = Playfair_Display({ subsets: ["latin"] });
+const playfair = Playfair_Display({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "PerinneSeura",
-  description: "Teekkarien PerinneSeura ry"
+  title: 'PerinneSeura',
+  description: 'Teekkarien PerinneSeura ry',
 };
 
 export default function RootLayout({
