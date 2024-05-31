@@ -5,11 +5,14 @@ import './globals.css';
 import Navbar from './componments/Navbar';
 import favicon from './favicon.ico';
 
-const playfair = Playfair_Display({ subsets: ['latin'] });
+const playfair = Playfair_Display({ subsets: ['latin'], preload: false });
 
 export const metadata: Metadata = {
-  title: 'PerinneSeura',
-  description: 'Teekkarien PerinneSeura ry',
+  title: {
+    default: 'Teekkarien PerinneSeura',
+    template: '%s - Teekkarien PerinneSeura',
+  },
+  description: 'Teekkarien PerinneSeura - Yli 30 vuotta teekkarikulttuuria',
 };
 
 export default function RootLayout({

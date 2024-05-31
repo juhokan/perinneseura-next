@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-white w-full ease-in duration-200 fixed top-0 left-0 z-10">
+    <header className="bg-white w-full ease-in duration-200 fixed top-0 left-0 z-10 drop-shadow-3xl">
       <nav className="mx-auto h-24 flex justify-between items-center">
         <div>
           <Link className="flex items-center justify-center" href="/" onClick={menuIcon ? handleMobileNavigation : () => {}}>
@@ -66,13 +66,13 @@ export default function Navbar() {
         </div>
 
         <div className={menuIcon
-          ? 'md:hidden absolute top-24 left-0 right-0 bottom-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-200 transform translate-x-0'
-          : 'md:hidden absolute top-24 left-0 right-[-100%] bottom-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-200 transform translate-x-full'}
+          ? 'md:hidden absolute top-24 left-0 right-0 bottom-0 flex items-center text-center w-full h-screen bg-white ease-in duration-200 transform translate-x-0'
+          : 'md:hidden absolute top-24 left-0 right-[-100%] bottom-0 flex items-center text-center w-full h-screen bg-white ease-in duration-200 transform translate-x-full'}
         >
 
           <div className="w-full">
 
-            <ul className="text-2xl mb-24 [&>*]:mt-4 [&>*]:mb-4">
+            <ul className="text-2xl mb-52 [&>*]:mt-4 [&>*]:mb-4">
 
               <li className="py-5 hover:underline cursor-pointer">
                 <Link onClick={handleMobileNavigation} href="https://jaynakisa.fi/">
