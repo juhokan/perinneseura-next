@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from './assets/home-image.jpg';
+import bg from '@/public/home-image.jpg';
 
 export default function Home() {
   return (

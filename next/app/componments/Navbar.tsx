@@ -6,8 +6,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import logo from '@/app/assets/pseura-logo.svg';
-import stripes from '@/app/assets/stripes.svg';
+import logo from '@/public/pseura-logo.svg';
+import stripes from '@/public/stripes.svg';
 
 export default function Navbar() {
   const [menuIcon, setMenuIcon] = useState(false);
