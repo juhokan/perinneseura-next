@@ -5,7 +5,7 @@ import bg from '@/public/pseura.webp';
 export default function Home() {
   return (
     <div
-      className="-z-10 w-screen h-screen flex items-center transition-all duration-500 ease-in-out bg-gradient-to-b from-[#e20000]  to-[#960000]"
+      className="relative w-screen h-screen overflow-hidden flex items-center transition-all duration-300 ease-in-out bg-gradient-to-b from-[#e20000] to-[#960000]"
     >
       <img
         src={bg.src}

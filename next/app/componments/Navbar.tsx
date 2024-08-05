@@ -104,7 +104,6 @@ export default function Navbar() {
             </ul>
 
           </div>
-          <Image src={stripes} alt="PerinneSeura stripes" className="absolute rotate-180 bottom-20 left-0 h-36 w-36" />
 
         </div>
       </nav>

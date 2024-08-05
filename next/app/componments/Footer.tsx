@@ -12,7 +12,7 @@ export default function Footer() {
           <Image src={logo} alt="Teekkarien PerinneSeura" className="h-12 w-auto my-2 mx-4" />
           <h3 className="text-white">©2024 Teekkarien PerinneSeura ry</h3>
         </div>
-        <Link href="https://www.instagram.com/jaynakisatre/" className="mx-4">
+        <Link href="https://www.instagram.com/jaynakisatre/" className="mx-4" aria-label="Jäynäkisa Tampere Instagram">
           <FaInstagram size={28} color="white" />
         </Link>
       </div>
