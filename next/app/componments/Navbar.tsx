@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
 'use client';
@@ -5,7 +6,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import logo from '@/public/pseura-logo.svg';
 import stripes from '@/public/stripes.svg';
 
@@ -59,10 +59,19 @@ export default function Navbar() {
 
         <Image src={stripes} alt="PerinneSeura stripes" className="h-24 w-24 max-md:hidden" />
 
-        <div onClick={handleMobileNavigation} onKeyDown={handleMobileNavigation} className="flex md:hidden m-6">
-          {menuIcon
-            ? (<AiOutlineClose size={25} />)
-            : (<AiOutlineMenu size={25} />)}
+        <div onClick={handleMobileNavigation} className="flex justify-center items-center md:hidden my-2 mx-4 w-8 h-5 cursor-pointer">
+          {menuIcon ? (
+            <div className="relative flex items-center justify-center h-full w-full">
+              <div className="absolute top-1/2 left-1/2 h-1 w-full bg-black transform -translate-x-1/2 -translate-y-1/2 rotate-45 transition-all duration-300" />
+              <div className="absolute top-1/2 left-1/2 h-1 w-full bg-black transform -translate-x-1/2 -translate-y-1/2 -rotate-45 transition-all duration-300" />
+            </div>
+          ) : (
+
+            <div className="relative flex flex-col justify-center items-center h-full w-full">
+              <div className="absolute top-[5%] left-1/2 h-1 w-[85%] bg-black transform -translate-x-1/2 transition-all duration-300" />
+              <div className="absolute bottom-[5%] left-1/2 h-1 w-[85%] bg-black transform -translate-x-1/2 transition-all duration-300" />
+            </div>
+          )}
         </div>
 
         <div className={menuIcon
@@ -95,6 +104,7 @@ export default function Navbar() {
             </ul>
 
           </div>
+          <Image src={stripes} alt="PerinneSeura stripes" className="absolute rotate-180 bottom-20 left-0 h-36 w-36" />
 
         </div>
       </nav>

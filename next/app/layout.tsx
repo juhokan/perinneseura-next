@@ -4,6 +4,7 @@ import { Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navbar from './componments/Navbar';
 import favicon from './favicon.ico';
+import Footer from './componments/Footer';
 
 const playfair = Playfair_Display({ subsets: ['latin'], preload: false });
 
@@ -28,10 +29,11 @@ export default function RootLayout({
         <link rel="icon" href={faviconUrl} sizes="any" />
       </head>
       <body className={playfair.className}>
-        <main>
+        <main className="h-screen">
           <Navbar />
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
