@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-
 'use client';
 
 import React, { useState } from 'react';
@@ -59,29 +56,34 @@ export default function Navbar() {
 
         <Image src={stripes} alt="PerinneSeura stripes" className="h-24 w-24 max-md:hidden" />
 
-        <div onClick={handleMobileNavigation} className="flex justify-center items-center md:hidden my-2 mx-4 w-8 h-5 cursor-pointer">
-          {menuIcon ? (
-            <div className="relative flex items-center justify-center h-full w-full">
-              <div className="absolute top-1/2 left-1/2 h-1 w-full bg-black transform -translate-x-1/2 -translate-y-1/2 rotate-45 transition-all duration-300" />
-              <div className="absolute top-1/2 left-1/2 h-1 w-full bg-black transform -translate-x-1/2 -translate-y-1/2 -rotate-45 transition-all duration-300" />
-            </div>
-          ) : (
+        <button onClick={handleMobileNavigation} type="button" className="relative flex justify-center items-center md:hidden m-4 w-8 h-5 cursor-pointer">
+          <div className="sr-only">{menuIcon ? 'Close menu' : 'Open menu'}</div>
 
-            <div className="relative flex flex-col justify-center items-center h-full w-full">
-              <div className="absolute top-[5%] left-1/2 h-1 w-[85%] bg-black transform -translate-x-1/2 transition-all duration-300" />
-              <div className="absolute bottom-[5%] left-1/2 h-1 w-[85%] bg-black transform -translate-x-1/2 transition-all duration-300" />
-            </div>
-          )}
-        </div>
+          <div
+            aria-hidden="true"
+            className={`absolute h-1 w-[85%] bg-black transition duration-300 ease-in-out transform ${
+              menuIcon ? 'rotate-45' : '-translate-y-1.5'
+            }`}
+          />
 
-        <div className={menuIcon
-          ? 'md:hidden absolute top-24 left-0 right-0 bottom-0 flex items-center text-center w-full h-screen bg-white ease-in duration-200 transform translate-x-0'
-          : 'md:hidden absolute top-24 left-0 right-[-100%] bottom-0 flex items-center text-center w-full h-screen bg-white ease-in duration-200 transform translate-x-full'}
+          <div
+            aria-hidden="true"
+            className={`absolute h-1 w-[85%] bg-black transition duration-300 ease-in-out transform ${
+              menuIcon ? '-rotate-45' : 'translate-y-1.5'
+            }`}
+          />
+        </button>
+
+        <div
+          aria-hidden="true"
+          className={`md:hidden fixed top-0 pt-24 pb-24 left-0 right-0 bottom-0 -z-50 flex justify-center items-center text-center w-full h-screen bg-white ease-in-out duration-300 transform will-change-transform ${
+            menuIcon ? 'translate-x-0' : 'fixed translate-x-full pointer-events-none'
+          }`}
         >
 
           <div className="w-full">
 
-            <ul className="text-2xl mb-52 [&>*]:mt-4 [&>*]:mb-4">
+            <ul className="text-2xl flex-col items-center justify-center [&>*]:m-4">
 
               <li className="py-5 hover:underline cursor-pointer">
                 <Link onClick={handleMobileNavigation} href="https://jaynakisa.fi/">
